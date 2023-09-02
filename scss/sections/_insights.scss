@@ -1,0 +1,90 @@
+@use '../util' as u;
+
+.insights {
+  display: flex;
+  flex-direction: column-reverse;
+  inline-size: 32.7rem;
+  background-color: var(--card-bg-color);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @include u.breakpoint-up(large) {
+    flex-direction: row;
+    inline-size: 111rem;
+  }
+
+  &__container-main {
+    padding: 4rem 3.4rem 3.6rem;
+    text-align: center;
+
+    @include u.breakpoint-up(large) {
+      padding: 8rem 10.8rem 6rem 7rem;
+      text-align: start;
+    }
+  }
+
+  &__title {
+    margin-block-end: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    @include u.breakpoint-up(large) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__title-accent {
+    color: var(--accent-color);
+  }
+
+  &__text {
+    margin-block-end: 4rem;
+    line-height: 1.6;
+    color: var(--main-paragraph-color);
+
+    @include u.breakpoint-up(large) {
+      margin-block-end: 7rem;
+    }
+  }
+
+  &__container-stats {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    @include u.breakpoint-up(large) {
+      flex-direction: row;
+      column-gap: 6rem;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__stat-title {
+    font-family: u.$lexend-deca;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    color: var(--stat-headings-color);
+  }
+
+  &__stat-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &__filter {
+    flex-shrink: 0;
+    background-color: var(--filter-color);
+  }
+
+  &__img {
+    display: block;
+    inline-size: 100%;
+    filter: opacity(.3);
+  }
+}

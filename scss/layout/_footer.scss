@@ -1,0 +1,22 @@
+.footer {
+  grid-area: footer;
+
+  .attribution {
+    font-size: 1.1rem;
+    text-align: center;
+
+    &__link {
+      transition: color 100ms;
+    }
+    
+    &__link:hover {
+      color: var(--accent-color);
+    }
+
+    &__link:focus {
+      padding: .2rem;
+      border: .2rem solid var(--accent-color);
+      border-radius: .5rem;
+    }
+  }
+}

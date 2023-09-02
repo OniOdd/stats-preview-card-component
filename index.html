@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+
+<body>
+  <main class="main">
+    <section class="insights" aria-labelledby="title-get-insights">
+      <div class="insights__container-main">
+        <h1 class="insights__title" id="title-get-insights">
+            Get <span class="insights__title-accent">insights</span> that help your business grow.
+        </h1>
+        <p class="insights__text">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+          experience, and overall efficiency.
+        </p>
+        <div class="insights__container-stats">
+          <article class="insights__stats">
+            <h2 class="insights__stat-title">companies</h2>
+            <p class="insights__stat-text">10k+</p>
+          </article>
+          <article class="insights__stats">
+            <h2 class="insights__stat-title">templates</h2>
+            <p class="insights__stat-text">314</p>
+          </article>
+          <article class="insights__stats">
+            <h2 class="insights__stat-title">queries</h2>
+            <p class="insights__stat-text">12m+</p>
+          </article>
+        </div>
+      </div>
+      <div class="insights__filter">
+        <picture>
+          <source srcset="./images/image-header-desktop.webp" type="image/webp" media="(min-width: 72.5em)">
+          <source srcset="./images/image-header-desktop.jpg" type="image/jpeg"  media="(min-width: 72.5em)">
+          <source srcset="./images/image-header-mobile.webp" type="image/webp">
+          <img class="insights__img" src="./images/image-header-mobile.jpg" alt="Three girls discuss something">
+        </picture>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <address class="attribution">
+      Challenge by <a class="attribution__link"
+                      href="https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62"
+                      target="_blank">Frontend Mentor</a>.
+      Coded by <a class="attribution__link"
+                  href="https://www.linkedin.com/in/mykyta-kavetskyi/" target="_blank">Mykyta Kavetskyi</a>.
+    </address>
+  </footer>
+</body>
+
+</html>
