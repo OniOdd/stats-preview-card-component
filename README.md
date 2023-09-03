@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-While doing this challenge, I practiced using the SASS preprocessor.
+While doing this challenge, I practiced using the SASS preprocessor. I also practiced using CSS animations.
 
 ### Useful resources
 

@@ -1,36 +1,48 @@
 @use '../util' as u;
 
+@keyframes on-start-section {
+  from {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .insights {
   display: flex;
   flex-direction: column-reverse;
-  inline-size: 32.7rem;
+  max-inline-size: 111rem;
   background-color: var(--card-bg-color);
   border-radius: 1rem;
   overflow: hidden;
+  animation: on-start-section 1s;
 
-  @include u.breakpoint-up(large) {
+  @include u.breakpoint-up(md) {
     flex-direction: row;
-    inline-size: 111rem;
   }
 
   &__container-main {
     padding: 4rem 3.4rem 3.6rem;
     text-align: center;
 
-    @include u.breakpoint-up(large) {
-      padding: 8rem 10.8rem 6rem 7rem;
+    @include u.breakpoint-up(md) {
+      padding:
+        clamp(4rem, 8rem / 120rem * 100vw, 8rem)
+        clamp(3.4rem, 10.8rem / 120rem * 100vw, 10.8rem)
+        clamp(3.6rem, 6rem / 120rem * 100vw, 6rem)
+        clamp(3.4rem, 7rem / 120rem * 100vw, 7rem);
       text-align: start;
     }
   }
 
   &__title {
     margin-block-end: 2rem;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 3.6rem / 120rem * 100vw, 3.6rem);
     font-weight: 700;
-
-    @include u.breakpoint-up(large) {
-      font-size: 3.6rem;
-    }
   }
 
   &__title-accent {
@@ -42,8 +54,8 @@
     line-height: 1.6;
     color: var(--main-paragraph-color);
 
-    @include u.breakpoint-up(large) {
-      margin-block-end: 7rem;
+    @include u.breakpoint-up(md) {
+      margin-block-end: clamp(4rem, 7rem / 120rem * 100vw, 7rem);
     }
   }
 
@@ -52,9 +64,14 @@
     flex-direction: column;
     row-gap: 3rem;
 
-    @include u.breakpoint-up(large) {
+    @include u.breakpoint-up(sm) {
+      justify-content: center;
       flex-direction: row;
       column-gap: 6rem;
+    }
+
+    @include u.breakpoint-up(md) {
+      justify-content: flex-start;
     }
   }
 
@@ -78,13 +95,17 @@
   }
 
   &__filter {
-    flex-shrink: 0;
     background-color: var(--filter-color);
+
+    @include u.breakpoint-up(xl) {
+      flex-shrink: 0;
+    }
   }
 
   &__img {
-    display: block;
     inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
     filter: opacity(.3);
   }
 }

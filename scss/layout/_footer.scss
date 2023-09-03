@@ -1,9 +1,22 @@
+@keyframes on-start-attr {
+  from {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .footer {
   grid-area: footer;
 
   .attribution {
     font-size: 1.1rem;
     text-align: center;
+    animation: on-start-attr 1s;
 
     &__link {
       transition: color 100ms;
