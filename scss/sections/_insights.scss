@@ -96,6 +96,7 @@
 
   &__filter {
     background-color: var(--filter-color);
+    transition: flex-shrink 1s;
 
     @include u.breakpoint-up(xl) {
       flex-shrink: 0;

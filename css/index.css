@@ -29,6 +29,8 @@ html {
 body {
   display: grid;
   grid-template-areas: "main" "footer";
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: auto;
   justify-content: center;
   align-content: center;
   row-gap: 2rem;
@@ -163,6 +165,7 @@ body {
 }
 .insights__filter {
   background-color: var(--filter-color);
+  transition: flex-shrink 1s;
 }
 @media (min-width: 75em) {
   .insights__filter {
