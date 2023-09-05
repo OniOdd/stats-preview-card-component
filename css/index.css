@@ -173,6 +173,7 @@ body {
   }
 }
 .insights__img {
+  display: block;
   inline-size: 100%;
   block-size: 100%;
   -o-object-fit: cover;
